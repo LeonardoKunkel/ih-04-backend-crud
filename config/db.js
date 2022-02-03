@@ -7,7 +7,7 @@ const connectDB = async () => {
             useUnifiedTopology: true
         })
 
-        return console.log('Database online')
+        return console.log('Database online');
     } catch (error) {
         console.log(error);
         return process.exit(1) // Mata la instancia de NodeJS hacia ese cliente
