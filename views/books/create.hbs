@@ -1,24 +1,27 @@
 
 <h1>Create book</h1>
 <hr>
-<form action="/books/create" method="post">
-    <label> Title:
-        <input type="text" name="title" />
-    </label>
 
-    <label> Author:
-        <input type="text" name="author" />
-    </label>
+{{!-- EL ACTION APUNTA AL .POST DEL RUTEO --}}
+<form action="/books/create" method="POST">
+  
+  <label> Title:
+    <input type="text" name="title" />
+  </label>
 
-    <label> Description:
-        <textarea name="description" cols="30" rows="4"> </textarea>
-    </label>
+  <label> Author:
+    <input type="text" name="author" />
+  </label>
 
-    <label> Rate:
-        <input type="number" name="rating" min="1" max="10" />
-    </label>
+  <label> Description:
+    <textarea name="description" cols="30" rows="4"> </textarea>
+  </label>
 
-    <button type="submit"> Create </button>
+  <label> Rate:
+    <input type="number" name="rating" min="1" max="10" />
+  </label>
+
+  <button type="submit"> Create </button>
 </form>
 
 

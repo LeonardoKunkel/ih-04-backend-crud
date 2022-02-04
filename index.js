@@ -14,6 +14,9 @@ app.use(express.static('public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'hbs');
 
+// Permite la 
+app.use(express.urlencoded({ extended: true }))
+
 // 3. Rutas
 app.use('/', require('./routes/index.routes'))
 app.use('/books', require('./routes/books.routes'));
