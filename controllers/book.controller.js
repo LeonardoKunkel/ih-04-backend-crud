@@ -22,8 +22,8 @@ exports.createBooksForm = async (req, res) => {
     const { title, description, author, rating } = req.body;
 
     try {
-        const newBook = await Book.create({ title, description, author, rating})
-        res.redirect('/books');
+        await Book.create({ title, description, author, rating})
+        return res.redirect('/books');
     } catch (error) {
         console.log(error);
         return
